@@ -32,6 +32,9 @@
                                                         <constraint firstAttribute="height" constant="200" id="euR-g0-c86"/>
                                                     </constraints>
                                                 </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SfO-2M-0AE">
+                                                    <rect key="frame" x="188.5" y="101.5" width="37" height="37"/>
+                                                </activityIndicatorView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dM-6D-OX2">
                                                     <rect key="frame" x="20" y="228" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -56,7 +59,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="M2F-bk-YSU" secondAttribute="trailing" constant="20" id="II7-Wj-MMz"/>
                                                 <constraint firstItem="FbC-HT-bcF" firstAttribute="leading" secondItem="8Gd-Zq-HzZ" secondAttribute="leading" constant="20" id="KgE-HS-QIS"/>
                                                 <constraint firstAttribute="trailing" secondItem="GYz-DP-YXn" secondAttribute="trailing" constant="20" id="NZD-Kt-XWM"/>
+                                                <constraint firstItem="SfO-2M-0AE" firstAttribute="centerX" secondItem="GYz-DP-YXn" secondAttribute="centerX" id="OTy-RM-xAq"/>
                                                 <constraint firstItem="M2F-bk-YSU" firstAttribute="top" secondItem="5dM-6D-OX2" secondAttribute="bottom" constant="8" id="QOU-Id-d0C"/>
+                                                <constraint firstItem="SfO-2M-0AE" firstAttribute="centerY" secondItem="GYz-DP-YXn" secondAttribute="centerY" id="Sd0-wf-bJg"/>
                                                 <constraint firstItem="GYz-DP-YXn" firstAttribute="top" secondItem="8Gd-Zq-HzZ" secondAttribute="top" constant="20" id="UUg-hH-pqR"/>
                                                 <constraint firstItem="5dM-6D-OX2" firstAttribute="top" secondItem="GYz-DP-YXn" secondAttribute="bottom" constant="8" id="alR-hd-6eK"/>
                                                 <constraint firstItem="GYz-DP-YXn" firstAttribute="leading" secondItem="8Gd-Zq-HzZ" secondAttribute="leading" constant="20" id="dDy-uV-ooS"/>
@@ -69,6 +74,7 @@
                                             <outlet property="bottomLabel" destination="M2F-bk-YSU" id="itB-YF-LiD"/>
                                             <outlet property="callDealerButton" destination="FbC-HT-bcF" id="W89-E5-QBk"/>
                                             <outlet property="listingImg" destination="GYz-DP-YXn" id="TWP-Lk-ddJ"/>
+                                            <outlet property="listingImgSpinner" destination="SfO-2M-0AE" id="1gr-9W-SEB"/>
                                             <outlet property="topLabel" destination="5dM-6D-OX2" id="mS3-5S-8ma"/>
                                         </connections>
                                     </tableViewCell>

@@ -12,9 +12,12 @@ class ListingTableViewCell: UITableViewCell
 {
     static let reuseID = "listing_cell"
     
+    @IBOutlet weak var listingImgSpinner: UIActivityIndicatorView!
     @IBOutlet weak var listingImg: UIImageView!
+    
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var bottomLabel: UILabel!
+    
     @IBOutlet weak var callDealerButton: UIButton!
     
     //internal
@@ -30,11 +33,13 @@ class ListingTableViewCell: UITableViewCell
     {
         self.listing = listing
         
+        listingImgSpinner.startAnimating()
         listingImg.image = listing.fetchListingImage(completion: { (img) in
             //weak self here because we don't want this completion handler holding onto
             //a reference to the cell... if the cell goes away, we don't care about
             //completion
             DispatchQueue.main.async() { [weak self] in
+                self?.listingImgSpinner.stopAnimating()
                 self?.listingImg.image = img
             }
         })
