@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  CarList
+
+  Created by Jake on 2020-08-12.
+  Copyright © 2020 Jake. All rights reserved.
+*/
+
+"error.phone-not-available.title" = "This device cannot make phone calls";
+"error.phone-not-available.body" = "Please try again on a device with telephone capabilities.";

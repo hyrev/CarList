@@ -19,6 +19,7 @@
 		23D3522D24E365DC00F4EA56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522C24E365DC00F4EA56 /* Constants.swift */; };
 		23D3522F24E36C5B00F4EA56 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522E24E36C5B00F4EA56 /* ListingTableViewCell.swift */; };
 		23D3523224E375DC00F4EA56 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523124E375DC00F4EA56 /* Decimal.swift */; };
+		23D3523424E4B2C600F4EA56 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23D3523324E4B2C600F4EA56 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		23D3522C24E365DC00F4EA56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		23D3522E24E36C5B00F4EA56 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		23D3523124E375DC00F4EA56 /* Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decimal.swift; sourceTree = "<group>"; };
+		23D3523324E4B2C600F4EA56 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				23D3522424E3540500F4EA56 /* listings.json */,
+				23D3523324E4B2C600F4EA56 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D3523424E4B2C600F4EA56 /* Localizable.strings in Resources */,
 				23090A0C24E202DE0008EF3B /* LaunchScreen.storyboard in Resources */,
 				23090A0924E202DE0008EF3B /* Assets.xcassets in Resources */,
 				23D3522524E3540500F4EA56 /* listings.json in Resources */,

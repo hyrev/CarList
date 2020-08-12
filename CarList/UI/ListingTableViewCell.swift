@@ -39,11 +39,24 @@ class ListingTableViewCell: UITableViewCell
     
     @objc fileprivate func callDealership()
     {
-        //TODO add a capability check before trying to call, if device isn't capable of
-        //making calls, show an alert
         if let listing = listing, let telephoneURL = URL(string: "tel://\(listing.telephone)")
         {
-            UIApplication.shared.open(telephoneURL, options: [:], completionHandler: nil)
+            if UIApplication.shared.canOpenURL(telephoneURL)
+            {
+                //if this device is capable of making telephone calls do it!
+                UIApplication.shared.open(telephoneURL, options: [:], completionHandler: nil)
+            }
+            else
+            {
+                //otherwise, tell the user that this device can't do it
+                let title = NSLocalizedString("error.phone-not-available.title", comment: "")
+                let body = NSLocalizedString("error.phone-not-available.body", comment: "")
+                let controller = UIAlertController.init(title: title, message: body, preferredStyle: .alert)
+                controller.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+                
+                //TODO present this alert in a better way
+                UIApplication.shared.keyWindow?.rootViewController?.present(controller, animated: true, completion: nil)
+            }
         }
     }
 }
