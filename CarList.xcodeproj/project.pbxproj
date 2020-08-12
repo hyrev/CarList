@@ -18,6 +18,7 @@
 		23D3522B24E356A100F4EA56 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522A24E356A100F4EA56 /* Listing.swift */; };
 		23D3522D24E365DC00F4EA56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522C24E365DC00F4EA56 /* Constants.swift */; };
 		23D3522F24E36C5B00F4EA56 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522E24E36C5B00F4EA56 /* ListingTableViewCell.swift */; };
+		23D3523224E375DC00F4EA56 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523124E375DC00F4EA56 /* Decimal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		23D3522A24E356A100F4EA56 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		23D3522C24E365DC00F4EA56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		23D3522E24E36C5B00F4EA56 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
+		23D3523124E375DC00F4EA56 /* Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decimal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		23D3521F24E353BF00F4EA56 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				23D3523024E375CC00F4EA56 /* Extensions */,
 				23D3522624E3566E00F4EA56 /* ListingManager.swift */,
 				23D3522A24E356A100F4EA56 /* Listing.swift */,
 				23D3522C24E365DC00F4EA56 /* Constants.swift */,
@@ -104,6 +107,14 @@
 				23D3522E24E36C5B00F4EA56 /* ListingTableViewCell.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		23D3523024E375CC00F4EA56 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				23D3523124E375DC00F4EA56 /* Decimal.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				23D3522F24E36C5B00F4EA56 /* ListingTableViewCell.swift in Sources */,
 				23090A0224E202DC0008EF3B /* SceneDelegate.swift in Sources */,
 				23D3522D24E365DC00F4EA56 /* Constants.swift in Sources */,
+				23D3523224E375DC00F4EA56 /* Decimal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

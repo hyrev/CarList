@@ -31,7 +31,7 @@ class ListingTableViewCell: UITableViewCell
         self.listing = listing
         
         topLabel.text = String.init(format: "%d %@ %@", listing.year, listing.make, listing.model)
-        bottomLabel.text = String.init(format: "%@ | %f | %@, %@", listing.price as CVarArg, listing.mileage, listing.city, listing.state)
+        bottomLabel.text = String.init(format: "%@ | %f | %@, %@", listing.price.priceString(withCents: false) as CVarArg, listing.mileage, listing.city, listing.state)
         
         
         callDealerButton.setTitle(listing.telephone, for: .normal)
