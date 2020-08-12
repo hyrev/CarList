@@ -70,19 +70,20 @@ class Listing
     func fetchListingImage(completion: @escaping (UIImage?) -> ()) -> UIImage?
     {
         URLSession.shared.dataTask(with: imageURL) { (imageData, response, error) in
-            guard let imageData = imageData, error == nil
+            //if we received an error, or no data, or data that doesn't parse into an image,
+            //fire the completion handler then bail out early
+            guard error == nil,
+                  let imageData = imageData,
+                  let image = UIImage.init(data: imageData)
             else
             {
                 completion(nil)
                 return
             }
             
-            let image = UIImage.init(data: imageData)
-            if image != nil
-            {
-                self.cacheImage(data: imageData)
-            }
-            
+            //if we were able to get an image, cache it and fire it off in the
+            //completion handler
+            self.cacheImage(data: imageData)
             completion(image)
         }.resume()
         

@@ -40,7 +40,10 @@ class ListingTableViewCell: UITableViewCell
             //completion
             DispatchQueue.main.async() { [weak self] in
                 self?.listingImgSpinner.stopAnimating()
-                self?.listingImg.image = img
+                if let img = img
+                {
+                    self?.listingImg.image = img
+                }
             }
         })
         
