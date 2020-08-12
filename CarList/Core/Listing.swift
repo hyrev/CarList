@@ -73,14 +73,17 @@ class Listing
             guard let imageData = imageData, error == nil
             else
             {
+                completion(nil)
                 return
             }
             
-            if let image = UIImage.init(data: imageData)
+            let image = UIImage.init(data: imageData)
+            if image != nil
             {
                 self.cacheImage(data: imageData)
-                completion(image)
             }
+            
+            completion(image)
         }.resume()
         
         //TODO return the image from cache
