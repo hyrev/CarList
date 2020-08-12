@@ -30,8 +30,18 @@ class ListingTableViewCell: UITableViewCell
     {
         self.listing = listing
         
+        listingImg.image = listing.fetchListingImage(completion: { (img) in
+            //weak self here because we don't want this completion handler holding onto
+            //a reference to the cell... if the cell goes away, we don't care about
+            //completion
+            DispatchQueue.main.async() { [weak self] in
+                self?.listingImg.image = img
+            }
+        })
+        
+        //TODO improve the formatting here
         topLabel.text = String.init(format: "%d %@ %@", listing.year, listing.make, listing.model)
-        bottomLabel.text = String.init(format: "%@ | %f | %@, %@", listing.price.priceString(withCents: false) as CVarArg, listing.mileage, listing.city, listing.state)
+        bottomLabel.text = String.init(format: "%@ | %f | %@, %@", listing.price.priceString(withCents: false), listing.mileage, listing.city, listing.state)
         
         
         callDealerButton.setTitle(listing.telephone, for: .normal)

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Listing
 {
@@ -59,5 +60,35 @@ class Listing
         
         self.id = id
         self.imageURL = imageURL
+    }
+    
+    /**
+     Fetches the listing's image from the server and saves it in cache.
+     Parameter completion: The block to execute after the image has successfully been fetched.
+     Returns: The listing's image that we currently have in cache, if any.
+     */
+    func fetchListingImage(completion: @escaping (UIImage?) -> ()) -> UIImage?
+    {
+        URLSession.shared.dataTask(with: imageURL) { (imageData, response, error) in
+            guard let imageData = imageData, error == nil
+            else
+            {
+                return
+            }
+            
+            if let image = UIImage.init(data: imageData)
+            {
+                self.cacheImage(data: imageData)
+                completion(image)
+            }
+        }.resume()
+        
+        //TODO return the image from cache
+        return nil
+    }
+    
+    fileprivate func cacheImage(data: Data)
+    {
+        //TODO write the image to cache
     }
 }
