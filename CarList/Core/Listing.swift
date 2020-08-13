@@ -29,7 +29,8 @@ class Listing
     {
         get
         {
-            if let cacheDir = FileManager.default.urls(for: .cachesDirectory, in: .allDomainsMask).first
+            if let cacheDir = FileManager.default.urls(for: .cachesDirectory,
+                                                       in: .allDomainsMask).first
             {
                 let listingDir = cacheDir.appendingPathComponent(id)
                 do
@@ -91,6 +92,10 @@ class Listing
         self.imageURL = imageURL
     }
     
+    /**
+     Convenience method for returning the location of the dealership this listing is at
+     Returns: The listing location, formatted as "city, state"
+     */
     func getLocation() -> String
     {
         return city + ", " + state
