@@ -72,8 +72,8 @@ class ListingTableViewCell: UITableViewCell
                 let controller = UIAlertController.init(title: title, message: body, preferredStyle: .alert)
                 controller.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
                 
-                //TODO present this alert in a better way
-                UIApplication.shared.keyWindow?.rootViewController?.present(controller, animated: true, completion: nil)
+                let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+                window?.rootViewController?.present(controller, animated: true, completion: nil)
             }
         }
     }
