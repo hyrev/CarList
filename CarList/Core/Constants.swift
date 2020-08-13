@@ -33,5 +33,8 @@ struct ImageKeys
     static let large = "large"
     static let medium = "medium"
     static let small = "small"
+    
+    //currently using this photo from the image dictionary because it's easy to retrieve
+    //and every listing in the data set has one
     static let firstPhoto = "firstPhoto"
 }

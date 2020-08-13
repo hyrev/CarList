@@ -10,6 +10,9 @@ import Foundation
 
 extension String
 {
+    /**
+     - returns: This string formatted as (###) ###-#### if its exactly 10 characters long, otherwise just return itself
+     */
     func formatAsPhoneNumber() -> String
     {
         //if this string isn't 10 characters long, bail early because it's not

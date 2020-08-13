@@ -49,10 +49,8 @@ class ListingTableViewCell: UITableViewCell
             }
         })
         
-        //TODO improve the formatting here
         topLabel.text = String.init(format: "%d %@ %@", listing.year, listing.make, listing.model)
-        bottomLabel.text = String.init(format: "%@ | %@ | %@", listing.price.priceString(withCents: false), listing.mileage.getRoundedDistanceStr(), listing.getLocation())
-        
+        bottomLabel.text = String.init(format: "%@ | %@ | %@", listing.price.priceString(withCents: false), listing.mileage.roundedDistanceString(), listing.getLocation())
         
         callDealerButton.setTitle(listing.telephone.formatAsPhoneNumber(), for: .normal)
     }
