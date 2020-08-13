@@ -49,10 +49,10 @@ class ListingTableViewCell: UITableViewCell
         
         //TODO improve the formatting here
         topLabel.text = String.init(format: "%d %@ %@", listing.year, listing.make, listing.model)
-        bottomLabel.text = String.init(format: "%@ | %f | %@, %@", listing.price.priceString(withCents: false), listing.mileage, listing.city, listing.state)
+        bottomLabel.text = String.init(format: "%@ | %@ | %@", listing.price.priceString(withCents: false), listing.mileage.getRoundedDistanceStr(), listing.getLocation())
         
         
-        callDealerButton.setTitle(listing.telephone, for: .normal)
+        callDealerButton.setTitle(listing.telephone.formatAsPhoneNumber(), for: .normal)
     }
     
     @objc fileprivate func callDealership()

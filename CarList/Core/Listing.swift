@@ -91,6 +91,11 @@ class Listing
         self.imageURL = imageURL
     }
     
+    func getLocation() -> String
+    {
+        return city + ", " + state
+    }
+    
     /**
      Fetches the listing's image from the server and saves it in cache.
      Parameter completion: The block to execute after the image has successfully been fetched.

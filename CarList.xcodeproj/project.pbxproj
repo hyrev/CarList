@@ -20,6 +20,8 @@
 		23D3522F24E36C5B00F4EA56 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522E24E36C5B00F4EA56 /* ListingTableViewCell.swift */; };
 		23D3523224E375DC00F4EA56 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523124E375DC00F4EA56 /* Decimal.swift */; };
 		23D3523424E4B2C600F4EA56 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23D3523324E4B2C600F4EA56 /* Localizable.strings */; };
+		23D3523624E4BEAE00F4EA56 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523524E4BEAE00F4EA56 /* Float.swift */; };
+		23D3523824E4C12400F4EA56 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523724E4C12400F4EA56 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		23D3522E24E36C5B00F4EA56 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		23D3523124E375DC00F4EA56 /* Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decimal.swift; sourceTree = "<group>"; };
 		23D3523324E4B2C600F4EA56 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		23D3523524E4BEAE00F4EA56 /* Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
+		23D3523724E4C12400F4EA56 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				23D3523124E375DC00F4EA56 /* Decimal.swift */,
+				23D3523524E4BEAE00F4EA56 /* Float.swift */,
+				23D3523724E4C12400F4EA56 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,12 +201,14 @@
 			files = (
 				23D3522724E3566E00F4EA56 /* ListingManager.swift in Sources */,
 				23D3522324E353FD00F4EA56 /* ListingsViewController.swift in Sources */,
+				23D3523824E4C12400F4EA56 /* String.swift in Sources */,
 				23D3522B24E356A100F4EA56 /* Listing.swift in Sources */,
 				23090A0024E202DC0008EF3B /* AppDelegate.swift in Sources */,
 				23D3522F24E36C5B00F4EA56 /* ListingTableViewCell.swift in Sources */,
 				23090A0224E202DC0008EF3B /* SceneDelegate.swift in Sources */,
 				23D3522D24E365DC00F4EA56 /* Constants.swift in Sources */,
 				23D3523224E375DC00F4EA56 /* Decimal.swift in Sources */,
+				23D3523624E4BEAE00F4EA56 /* Float.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
