@@ -27,6 +27,8 @@ class ListingTableViewCell: UITableViewCell
     {
         super.awakeFromNib()
         callDealerButton.addTarget(self, action: #selector(callDealership), for: .touchUpInside)
+        
+        callDealerButton.layer.borderColor = callDealerButton.tintColor.cgColor
     }
     
     func setupWithListing(_ listing: Listing)
