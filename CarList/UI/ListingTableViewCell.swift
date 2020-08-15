@@ -27,6 +27,11 @@ class ListingTableViewCell: UITableViewCell
     {
         super.awakeFromNib()
         callDealerButton.addTarget(self, action: #selector(callDealership), for: .touchUpInside)
+        
+        callDealerButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        callDealerButton.layer.borderWidth = 1.0
+        callDealerButton.layer.cornerRadius = 15.0
+        callDealerButton.layer.borderColor = callDealerButton.tintColor.cgColor
     }
     
     func setupWithListing(_ listing: Listing)
@@ -47,21 +52,46 @@ class ListingTableViewCell: UITableViewCell
             }
         })
         
-        //TODO improve the formatting here
         topLabel.text = String.init(format: "%d %@ %@", listing.year, listing.make, listing.model)
-        bottomLabel.text = String.init(format: "%@ | %f | %@, %@", listing.price.priceString(withCents: false), listing.mileage, listing.city, listing.state)
+        bottomLabel.text = String.init(format: "%@ | %@ | %@", listing.price.priceString(withCents: false), listing.mileage.roundedDistanceString(), listing.getLocation())
         
+        callDealerButton.setTitle(listing.telephone.formatAsPhoneNumber(), for: .normal)
         
-        callDealerButton.setTitle(listing.telephone, for: .normal)
+        //also update the layout when we set a listing; this can happen as a result
+        //of user accessibilty changes (ie: font size)
+        updateLayout()
+    }
+    
+    fileprivate func updateLayout()
+    {
+        topLabel.font = UIFont.preferredFont(forTextStyle: .title1)
+        bottomLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        callDealerButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        
+        layoutIfNeeded()
+        callDealerButton.layer.cornerRadius = callDealerButton.bounds.size.height / 2.0
     }
     
     @objc fileprivate func callDealership()
     {
-        //TODO add a capability check before trying to call, if device isn't capable of
-        //making calls, show an alert
         if let listing = listing, let telephoneURL = URL(string: "tel://\(listing.telephone)")
         {
-            UIApplication.shared.open(telephoneURL, options: [:], completionHandler: nil)
+            if UIApplication.shared.canOpenURL(telephoneURL)
+            {
+                //if this device is capable of making telephone calls do it!
+                UIApplication.shared.open(telephoneURL, options: [:], completionHandler: nil)
+            }
+            else
+            {
+                //otherwise, tell the user that this device can't do it
+                let title = NSLocalizedString("error.phone-not-available.title", comment: "")
+                let body = NSLocalizedString("error.phone-not-available.body", comment: "")
+                let controller = UIAlertController.init(title: title, message: body, preferredStyle: .alert)
+                controller.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+                
+                let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+                window?.rootViewController?.present(controller, animated: true, completion: nil)
+            }
         }
     }
 }
