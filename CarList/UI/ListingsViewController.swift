@@ -23,6 +23,12 @@ class ListingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //trick for removing unwanted divider lines at the bottom of the table
         tableView.tableFooterView = UIView.init(frame: .zero)
+        
+        manager.updateListingsWith {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool)

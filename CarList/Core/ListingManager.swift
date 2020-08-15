@@ -10,15 +10,51 @@ import Foundation
 
 class ListingManager
 {
+    static let kListingsEndpoint = "https://carfax-for-consumers.firebaseio.com/assignment.json"
     static let kListingsKey = "listings"
+    
+    //a URL that points to a local copy of the json listings in cache
+    fileprivate var listingsCacheURL: URL?
+    {
+        get
+        {
+            if let cacheDir = FileManager.default.urls(for: .cachesDirectory,
+                                                       in: .allDomainsMask).first
+            {
+                return cacheDir.appendingPathComponent("listings.json")
+            }
+
+            //if anything went wrong, don't return a URL
+            return nil
+        }
+    }
+    
     var listings: [Listing] = []
     
-    init()
+    func updateListingsWith(completion: @escaping () -> ())
     {
-        //TODO: fetch this content from the server, and also don't explicitly unwrap optionals
-        //ok for now, because we're testing with local data thats guaranteed to exist
-        let embeddedURL = Bundle.main.url(forResource: "listings", withExtension: "json")
-        self.listings = parseJSONListings(from: embeddedURL!)
+        if let listingsURL = URL.init(string: ListingManager.kListingsEndpoint)
+        {
+            URLSession.shared.dataTask(with: listingsURL) { (jsonData, response, error) in
+                if let listingsCacheURL = self.listingsCacheURL
+                {
+                    if let jsonData = jsonData
+                    {
+                        do
+                        {
+                            try jsonData.write(to: listingsCacheURL)
+                        }
+                        catch
+                        {
+                            print("failed to write json to cache")
+                        }
+                    }
+
+                    self.listings = self.parseJSONListings(from: listingsCacheURL)
+                    completion()
+                }
+            }.resume()
+        }
     }
     
     fileprivate func parseJSONListings(from jsonURL: URL) -> [Listing]
