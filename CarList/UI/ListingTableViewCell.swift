@@ -68,7 +68,6 @@ class ListingTableViewCell: UITableViewCell
         bottomLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         callDealerButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .subheadline)
         
-        layoutIfNeeded()
         callDealerButton.layer.cornerRadius = callDealerButton.bounds.size.height / 2.0
     }
     

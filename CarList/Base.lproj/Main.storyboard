@@ -86,11 +86,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EUa-8d-rvj">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching Listings..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVh-Hy-bGJ">
+                                <rect key="frame" x="70" y="482.5" width="274.5" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="EUa-8d-rvj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2IA-1z-I7q"/>
                             <constraint firstItem="TNQ-OS-eGH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Rn-uZ-NW0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CVh-Hy-bGJ" secondAttribute="trailing" constant="20" id="5Xj-UN-aqx"/>
                             <constraint firstItem="TNQ-OS-eGH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IIv-dT-YUC"/>
+                            <constraint firstItem="CVh-Hy-bGJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LD6-rj-Cid"/>
+                            <constraint firstItem="CVh-Hy-bGJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="feh-wj-L5S"/>
+                            <constraint firstItem="CVh-Hy-bGJ" firstAttribute="top" secondItem="EUa-8d-rvj" secondAttribute="bottom" constant="16" id="nB9-sY-o4J"/>
+                            <constraint firstItem="EUa-8d-rvj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tQL-Vw-q1J"/>
                             <constraint firstItem="TNQ-OS-eGH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uMq-fr-GTL"/>
                             <constraint firstItem="TNQ-OS-eGH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="udF-Yz-WRr"/>
                         </constraints>
@@ -98,6 +113,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="CarList" id="MND-KX-C4j"/>
                     <connections>
+                        <outlet property="loadingLabel" destination="CVh-Hy-bGJ" id="cz3-ya-2mh"/>
+                        <outlet property="spinner" destination="EUa-8d-rvj" id="sLs-Zk-Jkx"/>
                         <outlet property="tableView" destination="TNQ-OS-eGH" id="jx3-Fg-doF"/>
                     </connections>
                 </viewController>
