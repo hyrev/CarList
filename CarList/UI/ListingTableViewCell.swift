@@ -28,6 +28,9 @@ class ListingTableViewCell: UITableViewCell
         super.awakeFromNib()
         callDealerButton.addTarget(self, action: #selector(callDealership), for: .touchUpInside)
         
+        callDealerButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        callDealerButton.layer.borderWidth = 1.0
+        callDealerButton.layer.cornerRadius = 15.0
         callDealerButton.layer.borderColor = callDealerButton.tintColor.cgColor
     }
     
@@ -53,6 +56,20 @@ class ListingTableViewCell: UITableViewCell
         bottomLabel.text = String.init(format: "%@ | %@ | %@", listing.price.priceString(withCents: false), listing.mileage.roundedDistanceString(), listing.getLocation())
         
         callDealerButton.setTitle(listing.telephone.formatAsPhoneNumber(), for: .normal)
+        
+        //also update the layout when we set a listing; this can happen as a result
+        //of user accessibilty changes (ie: font size)
+        updateLayout()
+    }
+    
+    fileprivate func updateLayout()
+    {
+        topLabel.font = UIFont.preferredFont(forTextStyle: .title1)
+        bottomLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        callDealerButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        
+        layoutIfNeeded()
+        callDealerButton.layer.cornerRadius = callDealerButton.bounds.size.height / 2.0
     }
     
     @objc fileprivate func callDealership()
