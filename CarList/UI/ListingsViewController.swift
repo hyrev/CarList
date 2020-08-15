@@ -24,6 +24,31 @@ class ListingsViewController: UIViewController, UITableViewDataSource, UITableVi
         //trick for removing unwanted divider lines at the bottom of the table
         tableView.tableFooterView = UIView.init(frame: .zero)
     }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateAccessibility(notification:)),
+                                               name: UIContentSizeCategory.didChangeNotification,
+                                               object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIContentSizeCategory.didChangeNotification,
+                                                  object: nil)
+    }
+    
+    // MARK: Notification methods
+    
+    @objc func updateAccessibility(notification: Notification)
+    {
+        //cells update their layout when they are loaded, so all we need to do here is reload the table
+        tableView.reloadData()
+    }
 
     // MARK: UITableViewDataSource methods
     
