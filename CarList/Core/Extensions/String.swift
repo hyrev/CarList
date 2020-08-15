@@ -22,6 +22,13 @@ extension String
             return self;
         }
         
+        //if this string contains non-digit characters, bail early because it's not
+        //the format we expect
+        if Int64(self) == nil
+        {
+            return self
+        }
+        
         //set up indices for the "chunks" of the phone number
         let firstIndex = self.index(self.startIndex, offsetBy: 3)
         let secondIndex = self.index(firstIndex, offsetBy: 3)

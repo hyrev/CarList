@@ -16,7 +16,7 @@ class Listing
     let trim: String
     let year: Int
     let price: Decimal
-    let mileage: Float
+    let mileage: Double
     let city: String
     let state: String
     let telephone: String
@@ -63,7 +63,7 @@ class Listing
               let trim = json[ListingKeys.trim] as? String,
               let year = json[ListingKeys.year] as? Int,
               let price = json[ListingKeys.price] as? Double,
-              let mileage = json[ListingKeys.mileage] as? Float,
+              let mileage = json[ListingKeys.mileage] as? Double,
               let dealer = json[ListingKeys.dealer] as? Dictionary<String, Any>,
               let city = dealer[DealerKeys.city] as? String,
               let state = dealer[DealerKeys.state] as? String,

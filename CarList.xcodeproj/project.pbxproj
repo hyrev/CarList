@@ -20,9 +20,23 @@
 		23D3522F24E36C5B00F4EA56 /* ListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522E24E36C5B00F4EA56 /* ListingTableViewCell.swift */; };
 		23D3523224E375DC00F4EA56 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523124E375DC00F4EA56 /* Decimal.swift */; };
 		23D3523424E4B2C600F4EA56 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23D3523324E4B2C600F4EA56 /* Localizable.strings */; };
-		23D3523624E4BEAE00F4EA56 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523524E4BEAE00F4EA56 /* Float.swift */; };
+		23D3523624E4BEAE00F4EA56 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523524E4BEAE00F4EA56 /* Double.swift */; };
 		23D3523824E4C12400F4EA56 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523724E4C12400F4EA56 /* String.swift */; };
+		23D3524024E85D8700F4EA56 /* CarListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523F24E85D8700F4EA56 /* CarListTests.swift */; };
+		23D3524824E8602C00F4EA56 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523124E375DC00F4EA56 /* Decimal.swift */; };
+		23D3524A24E8603200F4EA56 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523724E4C12400F4EA56 /* String.swift */; };
+		23D3524B24E8624E00F4EA56 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523524E4BEAE00F4EA56 /* Double.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23D3524224E85D8700F4EA56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 230909F424E202DC0008EF3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 230909FB24E202DC0008EF3B;
+			remoteInfo = CarList;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		230909FC24E202DC0008EF3B /* CarList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,12 +54,22 @@
 		23D3522E24E36C5B00F4EA56 /* ListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewCell.swift; sourceTree = "<group>"; };
 		23D3523124E375DC00F4EA56 /* Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decimal.swift; sourceTree = "<group>"; };
 		23D3523324E4B2C600F4EA56 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		23D3523524E4BEAE00F4EA56 /* Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
+		23D3523524E4BEAE00F4EA56 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		23D3523724E4C12400F4EA56 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		23D3523D24E85D8700F4EA56 /* CarListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D3523F24E85D8700F4EA56 /* CarListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListTests.swift; sourceTree = "<group>"; };
+		23D3524124E85D8700F4EA56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		230909F924E202DC0008EF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D3523A24E85D8700F4EA56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				230909FE24E202DC0008EF3B /* CarList */,
+				23D3523E24E85D8700F4EA56 /* CarListTests */,
 				230909FD24E202DC0008EF3B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				230909FC24E202DC0008EF3B /* CarList.app */,
+				23D3523D24E85D8700F4EA56 /* CarListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,10 +146,19 @@
 			isa = PBXGroup;
 			children = (
 				23D3523124E375DC00F4EA56 /* Decimal.swift */,
-				23D3523524E4BEAE00F4EA56 /* Float.swift */,
+				23D3523524E4BEAE00F4EA56 /* Double.swift */,
 				23D3523724E4C12400F4EA56 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		23D3523E24E85D8700F4EA56 /* CarListTests */ = {
+			isa = PBXGroup;
+			children = (
+				23D3523F24E85D8700F4EA56 /* CarListTests.swift */,
+				23D3524124E85D8700F4EA56 /* Info.plist */,
+			);
+			path = CarListTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +181,24 @@
 			productReference = 230909FC24E202DC0008EF3B /* CarList.app */;
 			productType = "com.apple.product-type.application";
 		};
+		23D3523C24E85D8700F4EA56 /* CarListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23D3524624E85D8700F4EA56 /* Build configuration list for PBXNativeTarget "CarListTests" */;
+			buildPhases = (
+				23D3523924E85D8700F4EA56 /* Sources */,
+				23D3523A24E85D8700F4EA56 /* Frameworks */,
+				23D3523B24E85D8700F4EA56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23D3524324E85D8700F4EA56 /* PBXTargetDependency */,
+			);
+			name = CarListTests;
+			productName = CarListTests;
+			productReference = 23D3523D24E85D8700F4EA56 /* CarListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,6 +211,10 @@
 				TargetAttributes = {
 					230909FB24E202DC0008EF3B = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					23D3523C24E85D8700F4EA56 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 230909FB24E202DC0008EF3B;
 					};
 				};
 			};
@@ -175,6 +232,7 @@
 			projectRoot = "";
 			targets = (
 				230909FB24E202DC0008EF3B /* CarList */,
+				23D3523C24E85D8700F4EA56 /* CarListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +247,13 @@
 				23090A0924E202DE0008EF3B /* Assets.xcassets in Resources */,
 				23D3522524E3540500F4EA56 /* listings.json in Resources */,
 				23090A0724E202DC0008EF3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D3523B24E85D8700F4EA56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,11 +273,30 @@
 				23090A0224E202DC0008EF3B /* SceneDelegate.swift in Sources */,
 				23D3522D24E365DC00F4EA56 /* Constants.swift in Sources */,
 				23D3523224E375DC00F4EA56 /* Decimal.swift in Sources */,
-				23D3523624E4BEAE00F4EA56 /* Float.swift in Sources */,
+				23D3523624E4BEAE00F4EA56 /* Double.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D3523924E85D8700F4EA56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D3524024E85D8700F4EA56 /* CarListTests.swift in Sources */,
+				23D3524824E8602C00F4EA56 /* Decimal.swift in Sources */,
+				23D3524B24E8624E00F4EA56 /* Double.swift in Sources */,
+				23D3524A24E8603200F4EA56 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23D3524324E85D8700F4EA56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 230909FB24E202DC0008EF3B /* CarList */;
+			targetProxy = 23D3524224E85D8700F4EA56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		23090A0524E202DC0008EF3B /* Main.storyboard */ = {
@@ -382,6 +466,44 @@
 			};
 			name = Release;
 		};
+		23D3524424E85D8700F4EA56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CarListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakestephens.CarListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarList.app/CarList";
+			};
+			name = Debug;
+		};
+		23D3524524E85D8700F4EA56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CarListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakestephens.CarListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarList.app/CarList";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -399,6 +521,15 @@
 			buildConfigurations = (
 				23090A1124E202DE0008EF3B /* Debug */,
 				23090A1224E202DE0008EF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23D3524624E85D8700F4EA56 /* Build configuration list for PBXNativeTarget "CarListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D3524424E85D8700F4EA56 /* Debug */,
+				23D3524524E85D8700F4EA56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

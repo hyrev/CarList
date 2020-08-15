@@ -8,14 +8,14 @@
 
 import Foundation
 
-extension Float
+extension Double
 {
     /**
      - returns: a nice, human readable, rounded string for this exact mileage. If the mileage is less than 10k, round to the nearest mile, otherwise round to the nearest thousand miles
      */
     func roundedDistanceString() -> String
     {
-        if self < 10000
+        if self < 10000 && self > -10000
         {
             return String.init(format: "%d Mi", Int(self))
         }
