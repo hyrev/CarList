@@ -1,0 +1,164 @@
+{
+    "accidentHistory": {
+        "accidentSummary": ["No accident/damage reported to CARFAX"],
+        "icon": "noAccident",
+        "iconUrl": "https://media.carfax.com/img/vhr/ico_noAccident.gif",
+        "text": "No Accident or Damage Reported"
+    },
+    "advantage": true,
+    "backfill": false,
+    "badge": "GREAT",
+    "bedLength": "Unspecified",
+    "bodytype": "Sedan",
+    "cabType": "Unspecified",
+    "certified": false,
+    "currentPrice": 31985.0,
+    "dealer": {
+        "address": "10660 Automotive Dr",
+        "backfill": false,
+        "carfaxId": "CDOTUSNR41",
+        "cfxMicrositeUrl": "https://www.carfax.com/Dealer-Joyce-Koons-Honda-Buick-GMC-Manassas-VA_DCTOUSNR41",
+        "city": "Manassas",
+        "dealerAverageRating": 4.7,
+        "dealerInventoryUrl": "http://www.joycekoonshonda.com",
+        "dealerLeadType": "",
+        "dealerReviewComments": "Excellent job and excellent costumer service . Very good to communicate with the service advisor(Mo Merghane).",
+        "dealerReviewCount": 354,
+        "dealerReviewDate": "2020-02-05 08:03:40",
+        "dealerReviewRating": 5,
+        "dealerReviewReviewer": "2019 HONDA ACCORD LX Owner",
+        "dealerReviewTitle": "",
+        "latitude": "38.799414",
+        "longitude": "-77.517735",
+        "name": "Joyce Koons Honda Buick GMC",
+        "onlineOnly": false,
+        "phone": "8334980574",
+        "state": "VA",
+        "zip": "20109-2643"
+    },
+    "dealerType": "NEW",
+    "displacement": "2.4 L",
+    "distanceToDealer": 4.410725307988554,
+    "drivetype": "FWD",
+    "engine": "4 Cyl",
+    "exteriorColor": "Blue",
+    "firstSeen": "2019-12-12",
+    "followCount": 5,
+    "following": false,
+    "fuel": "Gasoline",
+    "hasViewed": false,
+    "id": "19UUB1F69LA000169CDOTUSNR4120191212",
+    "imageCount": 25,
+    "images": {
+        "baseUrl": "https://carfax-img.vast.com/carfax/4550688195707539809/",
+        "firstPhoto": {
+            "large": "https://carfax-img.vast.com/carfax/4550688195707539809/1/640x480",
+            "medium": "https://carfax-img.vast.com/carfax/4550688195707539809/1/344x258",
+            "small": "https://carfax-img.vast.com/carfax/4550688195707539809/1/120x90"
+        },
+        "large": ["https://carfax-img.vast.com/carfax/4550688195707539809/1/640x480"],
+        "medium": ["https://carfax-img.vast.com/carfax/4550688195707539809/1/344x258"],
+        "small": ["https://carfax-img.vast.com/carfax/4550688195707539809/1/120x90"]
+    },
+    "interiorColor": "Red",
+    "isEnriched": false,
+    "listPrice": 31985.0,
+    "make": "Acura",
+    "mileage": 1550,
+    "model": "TLX",
+    "monthlyPaymentEstimate": {
+        "downPaymentAmount": 3198.5,
+        "downPaymentPercent": 10.0,
+        "interestRate": 4.0,
+        "loanAmount": 28786.5,
+        "monthlyPayment": 530.15,
+        "price": 31985.0,
+        "termInMonths": 60
+    },
+    "mpgCity": 23,
+    "mpgHighway": 32,
+    "newTopOptions": ["Fog Lights", "Power Sun/Moonroof", "Alloy Wheels", "Navigation System", "Heated Seats", "CD (Single Disc)", "Rear-View Camera", "Split/Folding Seats", "Air Conditioning", "Satellite Radio"],
+    "noAccidents": true,
+    "oneOwner": true,
+    "onePrice": 33640.0,
+    "onePriceArrows": [{
+        "arrow": "UP",
+        "arrowUrl": "https://media.carfax.com/img/vhr/oneprice/icon-up-med.png",
+        "icon": "noAccident",
+        "iconUrl": "https://media.carfax.com/img/vhr/ico_noAccident.gif",
+        "order": 1,
+        "text": "No Accidents Reported"
+    }, {
+        "arrow": "UP",
+        "arrowUrl": "https://media.carfax.com/img/vhr/oneprice/icon-up-med.png",
+        "icon": "owner1",
+        "iconUrl": "https://media.carfax.com/img/vhr/ico_owner1.gif",
+        "order": 2,
+        "text": "1-Owner Vehicle"
+    }, {
+        "arrow": "UP",
+        "arrowUrl": "https://media.carfax.com/img/vhr/oneprice/icon-up-med.png",
+        "icon": "service",
+        "iconUrl": "https://media.carfax.com/img/vhr/ico_service.gif",
+        "order": 3,
+        "text": "Service History"
+    }, {
+        "arrow": "UP",
+        "arrowUrl": "https://media.carfax.com/img/vhr/oneprice/icon-up-med.png",
+        "icon": "personal",
+        "iconUrl": "https://media.carfax.com/img/vhr/ico_personal.gif",
+        "order": 4,
+        "text": "Personal Vehicle"
+    }],
+    "onlineOnly": false,
+    "ownerHistory": {
+        "history": [{
+            "city": "Charlotte",
+            "endOwnershipDate": "Present",
+            "ownerNumber": 1,
+            "purchaseDate": "09/14/19",
+            "state": "NC"
+        }],
+        "icon": "owner1",
+        "iconUrl": "https://media.carfax.com/img/vhr/ico_owner1.gif",
+        "text": "CARFAX 1-Owner"
+    },
+    "personalUse": true,
+    "recordType": "ENHANCED",
+    "sentLead": false,
+    "serviceHistory": {
+        "history": [{
+            "city": "Manassas",
+            "date": "12/11/19",
+            "description": "Vehicle serviced <span class='bullet' style='font-weight: bold;'>&#8226;</span> Pre-delivery inspection completed <span class='bullet' style='font-weight: bold;'>&#8226;</span> Maintenance inspection completed <span class='bullet' style='font-weight: bold;'>&#8226;</span> Air filter replaced <span class='bullet' style='font-weight: bold;'>&#8226;</span> Fluids checked <span class='bullet' style='font-weight: bold;'>&#8226;</span> Oil and filter changed <span class='bullet' style='font-weight: bold;'>&#8226;</span> Tire condition and pressure checked <span class='bullet' style='font-weight: bold;'>&#8226;</span> Wiper(s) replaced <span class='bullet' style='font-weight: bold;'>&#8226;</span> Safety inspection performed <span class='bullet' style='font-weight: bold;'>&#8226;</span> Emissions inspection performed.",
+            "odometerReading": 0,
+            "source": "Joyce Koons Honda Buick GMC, Manassas, VA, ",
+            "state": "VA"
+        }],
+        "icon": "service",
+        "iconUrl": "https://media.carfax.com/img/vhr/ico_service.gif",
+        "number": 3,
+        "text": "Service History"
+    },
+    "serviceRecords": true,
+    "sortScore": 191.65,
+    "stockNumber": "H200327A",
+    "subTrim": "Unspecified",
+    "topOptions": ["Technology Package", "Navigation System", "Fog Lights", "Spoiler", "Heated Seats", "Blind Spot Monitor", "Alloy Wheels", "Ventilated Seats", "Cooled Seats", "Lane Departure Warning"],
+    "transmission": "Automatic",
+    "trim": "Technology",
+    "vdpUrl": "https://www.carfax.com/vehicle/19UUB1F69LA000169",
+    "vehicleCondition": "Used",
+    "vehicleUseHistory": {
+        "history": [{
+            "averageMilesPerYear": 0,
+            "ownerNumber": 1,
+            "useType": "Personal Lease"
+        }],
+        "icon": "personal",
+        "iconUrl": "https://media.carfax.com/img/vhr/ico_personal.gif",
+        "text": "Personal Use"
+    },
+    "vin": "19UUB1F69LA000169",
+    "year": 2020
+}

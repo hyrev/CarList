@@ -8,16 +8,39 @@
 
 import XCTest
 
+@testable import CarList
+
 class CarListTests: XCTestCase {
 
+    var validListing: Listing?
+    
     override func setUpWithError() throws
     {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let bundle = Bundle(for: type(of: self))
+        let validListingURL = bundle.url(forResource: "ValidListing",
+                                         withExtension: "json")!
+        let embeddedData = try Data(contentsOf: validListingURL)
+        let json = try JSONSerialization.jsonObject(with: embeddedData,
+                                                    options: .allowFragments) as! Dictionary<String, Any>
+        
+        validListing = Listing.init(json: json)
     }
 
     override func tearDownWithError() throws
     {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    // MARK: Listing class tests
+    
+    func testListingParsing() throws
+    {
+        XCTAssertEqual(validListing?.make, "Acura")
+        XCTAssertEqual(validListing?.model, "TLX")
+        XCTAssertEqual(validListing?.year, 2020)
+        XCTAssertEqual(validListing?.price, 31985.0)
+        XCTAssertEqual(validListing?.mileage, 1550.0)
+        XCTAssertEqual(validListing?.getLocation(), "Manassas, VA")
     }
 
     // MARK: Decimal extension tests

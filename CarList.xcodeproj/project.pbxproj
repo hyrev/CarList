@@ -23,9 +23,7 @@
 		23D3523624E4BEAE00F4EA56 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523524E4BEAE00F4EA56 /* Double.swift */; };
 		23D3523824E4C12400F4EA56 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523724E4C12400F4EA56 /* String.swift */; };
 		23D3524024E85D8700F4EA56 /* CarListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523F24E85D8700F4EA56 /* CarListTests.swift */; };
-		23D3524824E8602C00F4EA56 /* Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523124E375DC00F4EA56 /* Decimal.swift */; };
-		23D3524A24E8603200F4EA56 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523724E4C12400F4EA56 /* String.swift */; };
-		23D3524B24E8624E00F4EA56 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3523524E4BEAE00F4EA56 /* Double.swift */; };
+		23D3524D24E866D700F4EA56 /* ValidListing.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D3524C24E866D700F4EA56 /* ValidListing.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +57,7 @@
 		23D3523D24E85D8700F4EA56 /* CarListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D3523F24E85D8700F4EA56 /* CarListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListTests.swift; sourceTree = "<group>"; };
 		23D3524124E85D8700F4EA56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D3524C24E866D700F4EA56 /* ValidListing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ValidListing.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +156,7 @@
 			children = (
 				23D3523F24E85D8700F4EA56 /* CarListTests.swift */,
 				23D3524124E85D8700F4EA56 /* Info.plist */,
+				23D3524C24E866D700F4EA56 /* ValidListing.json */,
 			);
 			path = CarListTests;
 			sourceTree = "<group>";
@@ -254,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D3524D24E866D700F4EA56 /* ValidListing.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D3524024E85D8700F4EA56 /* CarListTests.swift in Sources */,
-				23D3524824E8602C00F4EA56 /* Decimal.swift in Sources */,
-				23D3524B24E8624E00F4EA56 /* Double.swift in Sources */,
-				23D3524A24E8603200F4EA56 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
