@@ -8,3 +8,5 @@
 
 "error.phone-not-available.title" = "This device cannot make phone calls";
 "error.phone-not-available.body" = "Please try again on a device with telephone capabilities.";
+
+"listings.fetching" = "Fetching updated listings...";

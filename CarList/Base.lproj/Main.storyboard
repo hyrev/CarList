@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TNQ-OS-eGH">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listing_cell" id="LAW-Zw-knX" customClass="ListingTableViewCell" customModule="CarList" customModuleProvider="target">
@@ -99,15 +99,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EUa-8d-rvj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2IA-1z-I7q"/>
-                            <constraint firstItem="TNQ-OS-eGH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Rn-uZ-NW0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CVh-Hy-bGJ" secondAttribute="trailing" constant="20" id="5Xj-UN-aqx"/>
-                            <constraint firstItem="TNQ-OS-eGH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IIv-dT-YUC"/>
                             <constraint firstItem="CVh-Hy-bGJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LD6-rj-Cid"/>
+                            <constraint firstAttribute="trailing" secondItem="TNQ-OS-eGH" secondAttribute="trailing" id="M8R-Cy-hjM"/>
+                            <constraint firstAttribute="bottom" secondItem="TNQ-OS-eGH" secondAttribute="bottom" id="UgN-mT-q9W"/>
+                            <constraint firstItem="TNQ-OS-eGH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="f8L-PS-HdV"/>
                             <constraint firstItem="CVh-Hy-bGJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="feh-wj-L5S"/>
+                            <constraint firstItem="TNQ-OS-eGH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hzy-uC-hu2"/>
                             <constraint firstItem="CVh-Hy-bGJ" firstAttribute="top" secondItem="EUa-8d-rvj" secondAttribute="bottom" constant="16" id="nB9-sY-o4J"/>
                             <constraint firstItem="EUa-8d-rvj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tQL-Vw-q1J"/>
-                            <constraint firstItem="TNQ-OS-eGH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uMq-fr-GTL"/>
-                            <constraint firstItem="TNQ-OS-eGH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="udF-Yz-WRr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

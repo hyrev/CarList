@@ -27,6 +27,8 @@ class ListingsViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.tableFooterView = UIView.init(frame: .zero)
         
         let refresher = UIRefreshControl.init()
+        refresher.attributedTitle = NSAttributedString.init(string: NSLocalizedString("listings.fetching",
+                                                                                      comment: ""))
         refresher.addTarget(self,
                             action: #selector(updateListingsFromServer),
                             for: .valueChanged)
@@ -63,10 +65,11 @@ class ListingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @objc func updateListingsFromServer()
     {
         manager.updateListingsWith {
-            DispatchQueue.main.async {
-                self.tableView.refreshControl?.endRefreshing()
+            //allow for one whole second of loading to reduce jitteryness
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1), execute: {
                 self.tableView.reloadData()
-            }
+                self.tableView.refreshControl?.endRefreshing()
+            })
         }
     }
 
