@@ -26,6 +26,7 @@ class ListingsViewController: UIViewController, UITableViewDataSource, UITableVi
         //trick for removing unwanted divider lines at the bottom of the table
         tableView.tableFooterView = UIView.init(frame: .zero)
         
+        //add a pull-to-refresh controller to the table
         let refresher = UIRefreshControl.init()
         refresher.attributedTitle = NSAttributedString.init(string: NSLocalizedString("listings.fetching",
                                                                                       comment: ""))
@@ -34,6 +35,7 @@ class ListingsViewController: UIViewController, UITableViewDataSource, UITableVi
                             for: .valueChanged)
         tableView.refreshControl = refresher
         
+        //do the initial setup with a loading screen and fetch
         performInitialFetch()
     }
     
