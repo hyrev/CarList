@@ -29,6 +29,7 @@ class ListingTableViewCell: UITableViewCell
         callDealerButton.addTarget(self, action: #selector(callDealership), for: .touchUpInside)
         
         callDealerButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        callDealerButton.titleLabel?.baselineAdjustment = .alignCenters
         callDealerButton.layer.borderWidth = 1.0
         callDealerButton.layer.cornerRadius = 15.0
         callDealerButton.layer.borderColor = callDealerButton.tintColor.cgColor
@@ -68,7 +69,6 @@ class ListingTableViewCell: UITableViewCell
         bottomLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         callDealerButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .subheadline)
         
-        layoutIfNeeded()
         callDealerButton.layer.cornerRadius = callDealerButton.bounds.size.height / 2.0
     }
     

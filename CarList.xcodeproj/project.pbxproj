@@ -13,7 +13,6 @@
 		23090A0924E202DE0008EF3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23090A0824E202DE0008EF3B /* Assets.xcassets */; };
 		23090A0C24E202DE0008EF3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23090A0A24E202DE0008EF3B /* LaunchScreen.storyboard */; };
 		23D3522324E353FD00F4EA56 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522224E353FD00F4EA56 /* ListingsViewController.swift */; };
-		23D3522524E3540500F4EA56 /* listings.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D3522424E3540500F4EA56 /* listings.json */; };
 		23D3522724E3566E00F4EA56 /* ListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522624E3566E00F4EA56 /* ListingManager.swift */; };
 		23D3522B24E356A100F4EA56 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522A24E356A100F4EA56 /* Listing.swift */; };
 		23D3522D24E365DC00F4EA56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3522C24E365DC00F4EA56 /* Constants.swift */; };
@@ -45,7 +44,6 @@
 		23090A0B24E202DE0008EF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23090A0D24E202DE0008EF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23D3522224E353FD00F4EA56 /* ListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
-		23D3522424E3540500F4EA56 /* listings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = listings.json; sourceTree = "<group>"; };
 		23D3522624E3566E00F4EA56 /* ListingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingManager.swift; sourceTree = "<group>"; };
 		23D3522A24E356A100F4EA56 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		23D3522C24E365DC00F4EA56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 		23D3522024E353C500F4EA56 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				23D3522424E3540500F4EA56 /* listings.json */,
 				23D3523324E4B2C600F4EA56 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -245,7 +242,6 @@
 				23D3523424E4B2C600F4EA56 /* Localizable.strings in Resources */,
 				23090A0C24E202DE0008EF3B /* LaunchScreen.storyboard in Resources */,
 				23090A0924E202DE0008EF3B /* Assets.xcassets in Resources */,
-				23D3522524E3540500F4EA56 /* listings.json in Resources */,
 				23090A0724E202DC0008EF3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

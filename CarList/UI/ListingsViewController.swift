@@ -10,6 +10,8 @@ import UIKit
 
 class ListingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var loadingLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     //internal
@@ -23,6 +25,16 @@ class ListingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         //trick for removing unwanted divider lines at the bottom of the table
         tableView.tableFooterView = UIView.init(frame: .zero)
+        
+        let refresher = UIRefreshControl.init()
+        refresher.attributedTitle = NSAttributedString.init(string: NSLocalizedString("listings.fetching",
+                                                                                      comment: ""))
+        refresher.addTarget(self,
+                            action: #selector(updateListingsFromServer),
+                            for: .valueChanged)
+        tableView.refreshControl = refresher
+        
+        performInitialFetch()
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -49,6 +61,17 @@ class ListingsViewController: UIViewController, UITableViewDataSource, UITableVi
         //cells update their layout when they are loaded, so all we need to do here is reload the table
         tableView.reloadData()
     }
+    
+    @objc func updateListingsFromServer()
+    {
+        manager.updateListingsWith {
+            //allow for one whole second of loading to reduce jitteryness
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1), execute: {
+                self.tableView.reloadData()
+                self.tableView.refreshControl?.endRefreshing()
+            })
+        }
+    }
 
     // MARK: UITableViewDataSource methods
     
@@ -63,6 +86,28 @@ class ListingsViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.setupWithListing(manager.listings[indexPath.row])
         
         return cell
+    }
+    
+    // MARK: Helper methods
+    
+    fileprivate func performInitialFetch()
+    {
+        //hide the table and show the loading indicator before starting a fetch
+        spinner.startAnimating()
+        loadingLabel.isHidden = false
+        tableView.alpha = 0.0
+        
+        manager.updateListingsWith {
+            //once fetch is complete, hide loading elements and reload/show the table
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.spinner.stopAnimating()
+                self.loadingLabel.isHidden = true
+                UIView.animate(withDuration: 0.25) {
+                    self.tableView.alpha = 1.0
+                }
+            }
+        }
     }
 }
 
