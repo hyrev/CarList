@@ -31,6 +31,12 @@ class ListingManager
     
     var listings: [Listing] = []
     
+    /**
+     Fetches the latest listings from the server, saves them to cache, then loads listings from there.
+     Ideally this method would implement HTTP 304 somehow so we'd only download new data if the data differed from what we have.
+     Will filre the completion block regardless of whether or not this request is successful.
+     - Parameter completion: A block to fire after this request completes, not guaranteed to run on the main thread
+     */
     func updateListingsWith(completion: @escaping () -> ())
     {
         if let listingsURL = URL.init(string: ListingManager.kListingsEndpoint)
@@ -57,6 +63,11 @@ class ListingManager
         }
     }
     
+    /**
+     Reads a json file from a URL and parses the contents of the file at that URL into an array of Listing objects.
+     - Parameter jsonURL: URL of a json file, currently only being used for files in cache.
+     - Returns: an array of Listing objects successfully instantiated from the json.
+     */
     fileprivate func parseJSONListings(from jsonURL: URL) -> [Listing]
     {
         var tempListings: [Listing] = []
